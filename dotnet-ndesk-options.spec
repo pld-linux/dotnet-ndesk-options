@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.mono
 Summary:	C# Program Options Parsing library
 Summary(pl.UTF-8):	Biblioteka C# do analizy opcji programu
 Name:		dotnet-ndesk-options
