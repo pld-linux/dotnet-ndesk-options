@@ -43,7 +43,7 @@ Pliki programistyczne biblioteki C# ndesk Options.
 
 %prep
 %setup -q -n ndesk-options-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__aclocal}
