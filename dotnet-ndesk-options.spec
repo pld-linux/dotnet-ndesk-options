@@ -2,7 +2,7 @@ Summary:	C# Program Options Parsing library
 Summary(pl.UTF-8):	Biblioteka C# do analizy opcji programu
 Name:		dotnet-ndesk-options
 Version:	0.2.1
-Release:	1
+Release:	2
 License:	MIT
 Group:		Libraries
 Source0:	http://www.ndesk.org/archive/ndesk-options/ndesk-options-%{version}.tar.gz
