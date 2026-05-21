@@ -1,0 +1,22 @@
+--- ndesk-options-0.2.1/configure.ac.orig
++++ ndesk-options-0.2.1/configure.ac
+@@ -7,7 +7,7 @@
+
+ MONO_REQ_VERSION=1.9
+
+-AC_PATH_PROG(MCS, gmcs)
++AC_PATH_PROG(MCS, mcs)
+ AC_PATH_PROG(MONO, mono)
+ AC_PATH_PROG(MDASSEMBLER, mdassembler)
+ AC_PATH_PROG(MONODOCER, monodocer)
+@@ -15,7 +15,7 @@
+ enable_monodoc=yes
+
+ if test "x$MCS" = "x" ; then
+-  AC_MSG_ERROR([Can't find "gmcs" in your PATH])
++  AC_MSG_ERROR([Can't find "mcs" in your PATH])
+ fi
+ if test "x$MONO" = "x" ; then
+ 	AC_MSG_ERROR([Can't find "mono" in your PATH])
+</content>
+</invoke>

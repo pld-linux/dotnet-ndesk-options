@@ -2,12 +2,13 @@ Summary:	C# Program Options Parsing library
 Summary(pl.UTF-8):	Biblioteka C# do analizy opcji programu
 Name:		dotnet-ndesk-options
 Version:	0.2.1
-Release:	2
+Release:	3
 License:	MIT
 Group:		Libraries
 Source0:	http://www.ndesk.org/archive/ndesk-options/ndesk-options-%{version}.tar.gz
 # Source0-md5:	2d139bbf4c8be5197128195a65d1c98b
 Patch0:		%{name}-monodir.patch
+Patch1:		%{name}-mcs.patch
 URL:		http://www.ndesk.org/Options
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -19,6 +20,9 @@ Requires:	mono >= 1.9
 ExclusiveArch:	%{ix86} %{x8664} arm hppa ia64 ppc s390 s390x sparc sparcv9
 ExcludeArch:	i386
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+# no native code
+%define		_enable_debug_packages	0
 
 %description
 NDesk.Options is a program option parser for C#, inspired by
@@ -44,6 +48,7 @@ Pliki programistyczne biblioteki C# ndesk Options.
 %prep
 %setup -q -n ndesk-options-%{version}
 %patch -P0 -p1
+%patch -P1 -p1
 
 %build
 %{__aclocal}
